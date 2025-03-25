@@ -1,0 +1,10 @@
+services:
+  api:
+    container_name: cafeteria-collector-api
+    image: ghcr.io/bob-park/cafeteria-collector-api
+    build:
+      dockerfile: ./Dockerfile
+      x-bake:
+        platforms:
+          - linux/amd64
+          - linux/arm64
